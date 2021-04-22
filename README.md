@@ -36,3 +36,6 @@
 |       |                 |                 |
 |       |                 |                 |
 
+![001_hello.go](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210422231117678.png)
+
+![001_hello-linux.go](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210423001738446.png)

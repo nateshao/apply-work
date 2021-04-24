@@ -42,17 +42,7 @@
 
 ## day01--2021-04-22
 
-```go
-package main
-/*
-	day001:输出hello world
-*/
-import "fmt"
-
-func main() {
-	fmt.Println("Hello World")
-}
-```
+> 总结：配置环境。输出hello，同时在Linux服务器上，配置go环境，同时输出hello world
 
 ![001_hello.go](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210422231117678.png)
 
@@ -62,3 +52,4 @@ func main() {
 
 ![image-20210424094006353](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210424094006353.png)
 
+![image-20210424124655156](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210424124655156.png)

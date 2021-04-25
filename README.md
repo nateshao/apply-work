@@ -4,14 +4,6 @@
 
 [TOC]
 
-
-
-|       |      时间       |                           工作内容                           |
-| day01 | 2021-4-22(周四) | [输出hello world](https://github.com/nateshao/apply-work/blob/main/upload/001_hello.go.png)   [hello.go-Linux](https://github.com/nateshao/apply-work/blob/main/upload/001_hello-linux.go.png) |
-| day02 | 2021-4-23(周五) |                学习包管理，命令行解析，作业2                 |
-|       | 2021-4-24(周六) |                                                              |
-|       |                 |                                                              |
-
 # 第一周
 
 ## day01--2021-04-22
@@ -27,5 +19,7 @@
 ![image-20210425211136868](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210425211136868.png)
 
 ![image-20210424124655156](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210424124655156.png)
+
+## day04--2021-04-25
 
 ![image-20210425205508655](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210425205508655.png)

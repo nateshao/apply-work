@@ -32,6 +32,9 @@ func main() {
 
 	defer resp.Body.Close()                 // 请求关闭
 	input, err := ioutil.ReadAll(resp.Body) // 读取所有信息
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	var jsonWeather WeatherInfoJson
 	json.Unmarshal(input, &jsonWeather) // json转换

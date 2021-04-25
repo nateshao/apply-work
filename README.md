@@ -11,31 +11,6 @@
 | day02 | 2021-4-23(周五) |                学习包管理，命令行解析，作业2                 |
 |       | 2021-4-24(周六) |                                                              |
 |       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
-|       |                 |                                                              |
 
 # 第一周
 
@@ -49,7 +24,7 @@
 
 ## day02--2021-04-23
 
-![image-20210424094006353](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210424094006353.png)
+![image-20210425211136868](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210425211136868.png)
 
 ![image-20210424124655156](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210424124655156.png)
 

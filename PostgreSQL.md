@@ -68,7 +68,16 @@ PostgreSQL 删除数据库可以用以下三种方式：
 postgres=# DROP DATABASE runoobdb;
 ```
 
-
+```sql
+列举出数据库中的表
+zldd_user=> \d  
+1
+列举创建的数据库
+zldd_user=> \l  
+1
+退出
+postgres-# \q 
+```
 
 ## TODO...
 

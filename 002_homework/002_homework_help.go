@@ -25,4 +25,5 @@ func main() {
 	fmt.Println("fork:", *boolPtr)
 	fmt.Println("svar:", svar)
 	fmt.Println("tail:", flag.Args())
+	// 002_homework_help.exe -h
 }

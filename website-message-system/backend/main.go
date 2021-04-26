@@ -1,3 +1,31 @@
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"net/http"
+	"strings"
+)
+
+func main() {
+	//	// 发起Get请求
+	//	resp, err := http.Get("http://www.weather.com.cn/data/sk/101280601.html")
+	//	// 发起Post请求 可以访问https://www.baidu.com
+	resp, err := http.Post("http://www.weather.com.cn/data/sk/101280601.html",
+		"application/x-www-form-urlencoded", strings.NewReader("name=cjb"))
+
+	if err != nil {
+		fmt.Println("http.Get err=", err)
+		return
+	}
+	bytes, err := ioutil.ReadAll(resp.Body) // 读取
+	if err != nil {
+		fmt.Println("ioutil.ReadAll err=", err)
+		return
+	}
+	fmt.Println(string(bytes))
+}
+
 //package main
 //
 //import (
@@ -57,31 +85,3 @@
 //	result, _ := ioutil.ReadAll(resp.Body)
 //	return string(result)
 //}
-
-package main
-
-import (
-	"fmt"
-	"io/ioutil"
-	"net/http"
-	"strings"
-)
-
-func main() {
-	//	// 发起Get请求
-	//	resp, err := http.Get("http://www.weather.com.cn/data/sk/101280601.html")
-	//	// 发起Post请求 可以访问https://www.baidu.com
-	resp, err := http.Post("http://www.weather.com.cn/data/sk/101280601.html",
-		"application/x-www-form-urlencoded", strings.NewReader("name=cjb"))
-
-	if err != nil {
-		fmt.Println("http.Get err=", err)
-		return
-	}
-	bytes, err := ioutil.ReadAll(resp.Body) // 读取
-	if err != nil {
-		fmt.Println("ioutil.ReadAll err=", err)
-		return
-	}
-	fmt.Println(string(bytes))
-}

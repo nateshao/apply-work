@@ -4,6 +4,10 @@
 
 [TOC]
 
+https://github.com/nateshao/apply-work
+
+或者可以访问这个国内gitee：https://gitee.com/nateshao/apply-work
+
 # 第一周
 
 ## day01--2021-04-22 作业1

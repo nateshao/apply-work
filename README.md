@@ -197,11 +197,11 @@ func DeleteUser(c *gin.Context) {
 }
 ```
 
-// 启动成功
+- 启动成功
 
 ![image-20210426160310063](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210426160310063.png)
 
-运用Golang ide ![image-20210426163551860](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210426163551860.png)
+- 运用Golang ide ![image-20210426163551860](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210426163551860.png)
 
 进行发送get和post请求
 

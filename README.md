@@ -23,3 +23,15 @@
 ## day04--2021-04-25  作业3
 
 ![image-20210425205508655](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210425205508655.png)
+
+
+
+![image-20210425235557611](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210425235557611.png)
+
+## get请求
+
+![image-20210426095431167](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210426095431167.png)
+
+## post请求
+
+![image-20210426095527484](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210426095527484.png)

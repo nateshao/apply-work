@@ -32,6 +32,8 @@ https://github.com/nateshao/apply-work
 
 ![image-20210425235557611](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210425235557611.png)
 
+# 搭建Post、Get
+
 ## get请求
 
 ![image-20210426095431167](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210426095431167.png)
@@ -41,3 +43,25 @@ https://github.com/nateshao/apply-work
 ![image-20210426095527484](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210426095527484.png)
 
 post请求原因：Apache、IIS、Nginx等绝大多数web服务器，都不允许静态文件响应POST请求，否则会返回“HTTP/1.1 405 Method not allowed”错误。
+
+
+
+
+
+
+
+## 数据库设计
+
+```go
+CREATE TABLE liuyan (
+    
+id int primary key auto_increment not null,
+name varchar(20) not null,
+url varchar(100) not null,
+content varchar(1000) not null,
+time int
+) ENGINE = MYISAM CHARACTER SET utf8 COLLATE utf8_general_ci;
+```
+
+
+

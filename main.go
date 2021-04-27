@@ -23,6 +23,7 @@ var (
 )
 
 func main() {
+	// 链接 postgres
 	db, err = gorm.Open("postgres", "port=5432 user=postgres password=123456 dbname=liuyan sslmode=disable")
 	//
 	// 链接 mysql

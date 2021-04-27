@@ -7,6 +7,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
+	_ "github.com/lib/pq"
 )
 
 type User struct {
@@ -21,8 +23,10 @@ var (
 )
 
 func main() {
+	db, err = gorm.Open("postgres", "port=5432 user=postgres password=123456 dbname=liuyan sslmode=disable")
+	//
 	// 链接 mysql
-	db, err = gorm.Open("mysql", "root:123456@tcp(127.0.0.1:3306)/user?charset=utf8&parseTime=True&loc=Local")
+	//db, err = gorm.Open("mysql", "root:123456@tcp(127.0.0.1:3306)/user?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		panic(err)
 	} else {

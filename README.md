@@ -212,3 +212,11 @@ func DeleteUser(c *gin.Context) {
 ## Get
 
 ![image-20210426162748723](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210426162748723.png)
+
+
+
+
+
+## MySQL换为PostgreSQL
+
+![image-20210427092324880](https://nateshao-blog.oss-cn-shenzhen.aliyuncs.com/img/image-20210427092324880.png)

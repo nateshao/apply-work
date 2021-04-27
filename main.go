@@ -85,7 +85,7 @@ func LoginUser(c *gin.Context) {
 	c.DefaultPostForm("type", "post")
 	username := c.PostForm("username")
 	password := c.PostForm("password")
-	c.String(http.StatusOK, fmt.Sprintf("username:%s,password:%s,type:%s", username, password, types))
+	c.String(http.StatusOK, fmt.Sprintf("username:%s,password:%s,type:%s", username, password, type))
 }
 
 func CreateUser(c *gin.Context) {

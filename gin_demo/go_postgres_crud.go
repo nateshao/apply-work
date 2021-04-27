@@ -12,7 +12,7 @@ const (
 	port     = 5432
 	user     = "postgres"
 	password = "123456"
-	dbname   = "userinfo"
+	dbname   = "liuyan"
 )
 
 func connectDB() *sql.DB {
@@ -34,7 +34,7 @@ func connectDB() *sql.DB {
 }
 
 func insertUser(db *sql.DB) {
-	stmt, err := db.Prepare("insert into sdbo_department(dep_id,dep_name) values($1,$2)")
+	stmt, err := db.Prepare("insert into user(id,name,age) values(22,zhangsan,19)")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -43,7 +43,7 @@ func insertUser(db *sql.DB) {
 	if err != nil {
 		log.Fatal(err)
 	} else {
-		fmt.Println("insert into sdbo_department success!")
+		fmt.Println("insert into user success!")
 	}
 
 }
@@ -51,7 +51,7 @@ func insertUser(db *sql.DB) {
 func query(db *sql.DB) {
 	var id, name string
 
-	rows, err := db.Query(" select * from sdbo_department where dep_id=$1", "1")
+	rows, err := db.Query(" select * from user where id=22", "1")
 
 	if err != nil {
 		fmt.Println(err)

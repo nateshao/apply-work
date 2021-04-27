@@ -24,10 +24,10 @@ func sqlOpen() {
 }
 func sqlInsert() {
 	//插入数据
-	stmt, err := db.Prepare("INSERT INTO userinfo(username,departname,created) VALUES($1,$2,$3) RETURNING uid")
+	stmt, err := db.Prepare("INSERT INTO user(id,name,age) VALUES(11,zhangsan,lisi) RETURNING uid")
 	checkErr(err)
 
-	res, err := stmt.Exec("ficow", "软件开发部门", "2017-03-09")
+	res, err := stmt.Exec(11, "balabala..", "2021-04-27")
 	//这里的三个参数就是对应上面的$1,$2,$3了
 
 	checkErr(err)
@@ -39,7 +39,7 @@ func sqlInsert() {
 }
 func sqlDelete() {
 	//删除数据
-	stmt, err := db.Prepare("delete from userinfo where uid=$1")
+	stmt, err := db.Prepare("delete from user where uid=$1")
 	checkErr(err)
 
 	res, err := stmt.Exec(1)
@@ -52,7 +52,7 @@ func sqlDelete() {
 }
 func sqlSelect() {
 	//查询数据
-	rows, err := db.Query("SELECT * FROM userinfo")
+	rows, err := db.Query("SELECT * FROM user")
 	checkErr(err)
 
 	println("-----------")
@@ -68,7 +68,7 @@ func sqlSelect() {
 }
 func sqlUpdate() {
 	//更新数据
-	stmt, err := db.Prepare("update userinfo set username=$1 where uid=$2")
+	stmt, err := db.Prepare("update user set username=$1 where uid=$2")
 	checkErr(err)
 
 	res, err := stmt.Exec("ficow", 1)

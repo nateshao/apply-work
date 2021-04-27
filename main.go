@@ -52,6 +52,7 @@ func Router() {
 	router.GET("/user", InitPage)
 	router.GET("/user/list", ListUser)
 	router.GET("/user/find/:id", GetUser)
+	router.POST("/login", LoginUser)
 	router.POST("/user/create", CreateUser)
 	router.POST("/user/upload", UploadUser)
 	router.PUT("/user/update/:id", UpdateUser)
@@ -77,6 +78,14 @@ func UploadUser(c *gin.Context) {
 	}
 	c.SaveUploadedFile(file, file.Filename)
 	c.String(http.StatusOK, file.Filename)
+}
+
+// 用户登录
+func LoginUser(c *gin.Context) {
+	c.DefaultPostForm("type", "post")
+	username := c.PostForm("username")
+	password := c.PostForm("password")
+	c.String(http.StatusOK, fmt.Sprintf("username:%s,password:%s,type:%s", username, password, types))
 }
 
 func CreateUser(c *gin.Context) {

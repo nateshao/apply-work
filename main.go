@@ -50,10 +50,10 @@ func Router() {
 	router := gin.Default()
 	// 路径映射
 	router.GET("/user", InitPage)
-	router.POST("/user/create", CreateUser)
 	router.GET("/user/list", ListUser)
-	router.PUT("/user/update/:id", UpdateUser)
 	router.GET("/user/find/:id", GetUser)
+	router.POST("/user/create", CreateUser)
+	router.PUT("/user/update/:id", UpdateUser)
 	router.DELETE("/user/:id", DeleteUser)
 	router.Run(":8080")
 }
@@ -72,9 +72,14 @@ func CreateUser(c *gin.Context) {
 	if user.Name != "" && user.Age > 0 {
 		db.Create(&user)
 		c.JSON(http.StatusOK, gin.H{"success": &user})
-	} else {
-		c.JSON(422, gin.H{"error": "Fields are empty"})
+
 	}
+	return
+
+	//else {
+	//	c.JSON(422, gin.H{"error": "Fields are empty"})
+	//}
+	//
 }
 
 // 更新用户

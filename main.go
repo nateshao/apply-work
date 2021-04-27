@@ -53,6 +53,7 @@ func Router() {
 	router.GET("/user/list", ListUser)
 	router.GET("/user/find/:id", GetUser)
 	router.POST("/user/create", CreateUser)
+	router.POST("/user/upload", UploadUser)
 	router.PUT("/user/update/:id", UpdateUser)
 	router.DELETE("/user/:id", DeleteUser)
 	router.Run(":8080")
@@ -63,6 +64,21 @@ func InitPage(c *gin.Context) {
 		"message": "OK!",
 	})
 }
+
+// 比如用户留言附加截图等
+func UploadUser(c *gin.Context) {
+	r := gin.Default()
+	// 对上传的文件做出限制
+	r.MaxMultipartMemory = 8 << 20
+
+	file, err := c.FormFile("file")
+	if err != nil {
+		c.String(500, "上传图片出错啦。")
+	}
+	c.SaveUploadedFile(file, file.Filename)
+	c.String(http.StatusOK, file.Filename)
+}
+
 func CreateUser(c *gin.Context) {
 	var user User
 	c.BindJSON(&user) // 使用bindJson填充数据

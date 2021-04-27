@@ -94,7 +94,9 @@ var (
 func main() {
 	// 链接 postgres
 	db, err = gorm.Open("postgres", "port=5432 user=postgres password=123456 dbname=liuyan sslmode=disable")
-	//
+	//还可以通过这种方式打开
+	//db, err := sql.Open("postgres", "postgres://pqgotest:123456@localhost/liuyan?sslmode=verify-full")
+
 	// 链接 mysql
 	//db, err = gorm.Open("mysql", "root:123456@tcp(127.0.0.1:3306)/user?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
@@ -117,10 +119,11 @@ func Router() {
 	router := gin.Default()
 	// 路径映射
 	router.GET("/user", InitPage)
-	router.POST("/user/create", CreateUser)
 	router.GET("/user/list", ListUser)
-	router.PUT("/user/update/:id", UpdateUser)
 	router.GET("/user/find/:id", GetUser)
+	router.POST("/user/create", CreateUser)
+	router.POST("/user/upload",UploadUser)
+	router.PUT("/user/update/:id", UpdateUser)
 	router.DELETE("/user/:id", DeleteUser)
 	router.Run(":8080")
 }
@@ -130,6 +133,22 @@ func InitPage(c *gin.Context) {
 		"message": "OK!",
 	})
 }
+
+
+// 比如用户留言附加截图等
+func UploadUser(c *gin.Context)  {
+	r := gin.Default()
+	// 对上传的文件做出限制
+	r.MaxMultipartMemory = 8 << 20
+
+	file, err := c.FormFile("file")
+	if err != nil {
+		c.String(500,"上传图片出错啦。")
+	}
+	c.SaveUploadedFile(file,file.Filename)
+	c.String(http.StatusOK,file.Filename)
+}
+
 func CreateUser(c *gin.Context) {
 	var user User
 	c.BindJSON(&user) // 使用bindJson填充数据
@@ -139,9 +158,14 @@ func CreateUser(c *gin.Context) {
 	if user.Name != "" && user.Age > 0 {
 		db.Create(&user)
 		c.JSON(http.StatusOK, gin.H{"success": &user})
-	} else {
-		c.JSON(422, gin.H{"error": "Fields are empty"})
+
 	}
+	return
+
+	//else {
+	//	c.JSON(422, gin.H{"error": "Fields are empty"})
+	//}
+	//
 }
 
 // 更新用户

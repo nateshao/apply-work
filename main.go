@@ -25,7 +25,9 @@ var (
 func main() {
 	// 链接 postgres
 	db, err = gorm.Open("postgres", "port=5432 user=postgres password=123456 dbname=liuyan sslmode=disable")
-	//
+	//还可以通过这种方式打开
+	//db, err := sql.Open("postgres", "postgres://pqgotest:123456@localhost/liuyan?sslmode=verify-full")
+
 	// 链接 mysql
 	//db, err = gorm.Open("mysql", "root:123456@tcp(127.0.0.1:3306)/user?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {

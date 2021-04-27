@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 
+	_ "github.com/jinzhu/gorm/dialects/postgres"
 	_ "github.com/lib/pq"
 )
 
@@ -11,7 +12,7 @@ var db *sql.DB
 
 func sqlOpen() {
 	var err error
-	db, err = sql.Open("postgres", "port=5432 user=postgres password=123456 dbname=userinfo sslmode=disable")
+	db, err = sql.Open("postgres", "port=5432 user=postgres password=123456 dbname=liuyan sslmode=disable")
 	//port是数据库的端口号，默认是5432，如果改了，这里一定要自定义；
 	//user就是你数据库的登录帐号;
 	//dbname就是你在数据库里面建立的数据库的名字;

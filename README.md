@@ -44,27 +44,20 @@ https://github.com/nateshao/apply-work
 
 post请求原因：Apache、IIS、Nginx等绝大多数web服务器，都不允许静态文件响应POST请求，否则会返回“HTTP/1.1 405 Method not allowed”错误。
 
-
-
-
-
-
-
 ## 数据库设计
 
 ```go
 CREATE TABLE `user` (
-  `id` int(20) NOT NULL AUTO_INCREMENT,
-  `name` varchar(20) DEFAULT NULL,
-  `age` int(20) DEFAULT NULL,
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `uname` CHAR(20) DEFAULT NULL, 			// uname 用户名
+  `email` VARCHAR(32) NOT NULL,				// 邮箱
+  `content` TEXT,  				 			// content 留言内容
+  `insert_time` INT(10) UNSIGNED NOT NULL,	// insert_time 留言时间
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8
-
-INSERT  INTO `user`(`id`,`name`,`age`) VALUES (1,'zhangsan',11),(2,'lisi',12),(3,'wangwu',13),(4,'zhaoliu',18),(5,'aaaa',20),(6,'bbbb',21),(7,'cccc',22),(8,'dddd',333);
-
+) ENGINE=INNODB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8
 ```
 
-
+## main.go
 
 ```go
 package main

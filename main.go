@@ -53,6 +53,7 @@ func Router() {
 	router.GET("/user/list", ListUser)
 	router.GET("/user/find/:id", GetUser)
 	router.POST("/login", LoginUser)
+	router.POST("/register", register)
 	router.POST("/user/create", CreateUser)
 	router.POST("/user/upload", UploadUser)
 	router.PUT("/user/update/:id", UpdateUser)

@@ -47,13 +47,20 @@ post请求原因：Apache、IIS、Nginx等绝大多数web服务器，都不允�
 ## 数据库设计
 
 ```go
-CREATE TABLE `user` (
+CREATE TABLE `liuyan` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `uname` CHAR(20) DEFAULT NULL, 			// uname 用户名
   `email` VARCHAR(32) NOT NULL,				// 邮箱
   `content` TEXT,  				 			// content 留言内容
   `insert_time` INT(10) UNSIGNED NOT NULL,	// insert_time 留言时间
   PRIMARY KEY (`id`)
+) ENGINE=INNODB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8
+
+CREATE TABLE `user` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `uname` CHAR(20) DEFAULT NULL, 			
+  PRIMARY KEY (`id`)
+  foreign key(liuyan_id) references dep(id)
 ) ENGINE=INNODB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8
 ```
 
